@@ -1,0 +1,234 @@
+
+<h1>Satın Alım İşlemleri</h1>
+
+<form class="form-horizontal" action="<?php echo base_url('anasayfa/satinalim'); ?>" method="post">
+<div class="panel-group" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a href="#collapse-checkout-option" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle collapsed">1. İşlem : Teslimat Adresi <i class="fa fa-caret-down"></i></a>
+</h4>
+</div>
+
+<div class="panel-collapse collapse" id="collapse-checkout-option">
+<div class="panel-body">
+<div class="form-horizontal">
+<div class="radio">
+<h3>Adres Bilgileri</h3>
+</div>
+<div id="payment-existing">
+<table class="table table-bordered">
+<thead>
+<tr>
+<td class="text-center">İsim Soyisim</td>
+<td class="text-center">Açık Adres</td>
+<td class="text-center">İl</td>
+<td class="text-center">İlçe</td>
+<td class="text-center">Mahalle</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="text-center">Ad Soyad</td>
+<td class="text-center">Adres</td>
+<td class="text-center">Şehir</td>
+<td class="text-center">İlçe</td>
+<td class="text-center">Mahalle</td>
+
+</tr>
+</tbody>
+</table>
+<p>Eğer Farklı Bir Adrese Teslimat İstiyorsanız Lütfen Aşağıdaki Formu Doldurunuz</p>
+<table class="table table-bordered">
+<thead>
+<tr>
+<td class="text-center">İsim Soyisim</td>
+<td class="text-center">Açık Adres</td>
+<td class="text-center">İl</td>
+<td class="text-center">İlçe</td>
+<td class="text-center">Mahalle</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="text-center"><input type="text" name="yeniad"></td>
+<td class="text-center"><input type="text" size="55" name="yeniadres"></td>
+<td class="text-center"><input type="text" name="yeniil"></td>
+<td class="text-center"><input type="text" name="yeniilce"></td>
+<td class="text-center"><input type="text" name="yenimahalle"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a href="#collapse-payment-cargo" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle collapsed">2. İşlem : Kargo Seçimi <i class="fa fa-caret-down"></i></a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse-payment-cargo">
+<div class="panel-body">
+<div class="radio">
+<h3>Kargo Bilgileri</h3>
+</div>
+<table class="table table-bordered">
+<thead>
+<tr>
+<td class="text-center">Kargo Firması</td>
+<td class="text-center">Fiyatı</td>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="text-center">Kargo Firması</td>
+<td class="text-center" style="font-size:16px; font-weight:bold">
+<input type="radio" required name="kargotutar" value=""> 00 TL</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a href="#collapse-payment-bank" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle collapsed">3 İşlem : Ödeme Seçimi <i class="fa fa-caret-down"></i></a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse-payment-bank">
+<div class="panel-body">
+<div class="radio">
+<h3>Kredi Kartı Bilgileri</h3>
+</div>
+<table class="table table-bordered">
+<thead>
+<tr>
+<td class="text-center">Kar Numarası</td>
+<td class="text-center">Son Kullanma Tarihi</td>
+<td class="text-center">CCV</td>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="text-center"><input type="" name=""></td>
+<td class="text-center"><input type="" name=""></td>
+<td class="text-center"><input type="" name=""></td>
+</tr>
+
+</tbody>
+</table>
+<p>Eğer Kapıda Ödeme Yapmak İstiyorsanız Lütfen Seçiniz : <input type="radio" name="kododeme" value="1"></p>
+<p style="color:red; font-weight:bold">Not : Ödeme Yapacağınız Bankayı Belirleyip IBAN Numaralarına EFT ya da Havale Yaptıktan sonra</p>
+<p style="color:red; font-weight:bold">Not : Dekonttaki İsim Soyisim ile Banka Adını Ödeme Türünü İletişim Formundan bildirmeniz gerekmektedir.</p>
+</div>
+
+
+<div class="panel-body">
+<div class="radio">
+<h3>Banka Bilgileri</h3>
+</div>
+<table class="table table-bordered">
+<thead>
+<tr>
+<td class="text-center">Banka Adı</td>
+<td class="text-center">Şube</td>
+<td class="text-center">IBAN</td>
+<td class="text-center">Hesap No</td>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="text-center"><input type="radio" name="bankaadi" value="">Banka Adı</td>
+<td class="text-center">Şube</td>
+<td class="text-center">Iban</td>
+<td class="text-center">Hesap</td>
+</tr>
+
+</tbody>
+</table>
+<p>Eğer Kapıda Ödeme Yapmak İstiyorsanız Lütfen Seçiniz : <input type="radio" name="kododeme" value="1"></p>
+<p style="color:red; font-weight:bold">Not : Ödeme Yapacağınız Bankayı Belirleyip IBAN Numaralarına EFT ya da Havale Yaptıktan sonra</p>
+<p style="color:red; font-weight:bold">Not : Dekonttaki İsim Soyisim ile Banka Adını Ödeme Türünü İletişim Formundan bildirmeniz gerekmektedir.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">
+<a href="#collapse-payment-gift" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle collapsed">4. İşlem : Hediye Kartı İsteği <i class="fa fa-caret-down"></i></a>
+</h4>
+</div>
+<div class="panel-collapse collapse" id="collapse-payment-gift">
+<div class="panel-body">
+<div class="radio">
+<h3>Hediye Kartı İsteği</h3>
+</div>
+<p>Alışverişinizde Hediye Kartı İstiyorsanız Aşağıdaki Bilgileri Doldurunuz</p>
+
+<div class="form-horizontal">
+<div class="form-group required">
+<label class="col-sm-2 control-label" for="input-to-name">Kartta Yazacak İsim</label>
+<div class="col-sm-10">
+<input type="text" name="hediyeisim" value="" id="input-to-name" class="form-control" />
+</div>
+</div>
+<div class="form-group required">
+<label class="col-sm-2 control-label" for="input-from-name">Sizin İsminiz</label>
+<div class="col-sm-10">
+<input type="text" name="sizinisim" value="" id="input-from-name" class="form-control" />
+</div>
+</div>
+<div class="form-group required">
+<label class="col-sm-2 control-label">Kartın Teması</label>
+<div class="col-sm-10">
+<div class="radio">
+<label><input type="radio" name="dgunu" value="1" />Doğum Günü</label>
+</div>
+<div class="radio">
+<label><input type="radio" name="yilbasi" value="2" />Yılbaşı</label>
+</div>
+<div class="radio">
+<label><input type="radio" name="evlilik" value="3" />Yıldönümü</label>
+</div>
+<div class="radio">
+<label><input type="radio" name="genel" value="4" />Genel</label>
+</div>
+</div>
+</div>
+<div class="form-group">
+<label class="col-sm-2 control-label" for="input-message"><span data-toggle="tooltip" title="Optional">Mesajınız</span></label>
+<div class="col-sm-10">
+<textarea name="hediyemesaj" cols="40" rows="5" id="input-message" class="form-control"></textarea>
+</div>
+</div><br>
+<div class="form-group required">
+<label class="col-sm-2 control-label">Fiyatı</label>
+<div class="col-sm-10">
+<div class="radio">
+<label><input type="radio" name="hfiyat" value="1" />5 TL</label>
+</div>
+</div>
+</div>
+<div class="buttons clearfix">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="buttons">
+<div class="pull-right">
+<input type="submit" value="İşleme Devam Et" id="button-confirm" class="btn btn-primary">
+</div>
+</div>
+</div>
+</div>
+</form>

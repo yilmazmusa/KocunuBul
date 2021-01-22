@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]>
+<html dir="ltr" lang="en" class="ie8"><![endif]-->
+<!--[if IE 9 ]>
+<html dir="ltr" lang="en" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="ltr" lang="tr">
+<!--<![endif]-->
+<head>
+<?php $this->load->view('front/include/head'); ?>
+<?php $this->load->view('front/include/style'); ?>
+</head>
+<body class="product-product">
+<?php $this->load->view('front/include/mobile'); ?>
+<div id="page">
+<div class="shadow"></div>
+<div class="toprow-1">
+<a class="swipe-control" href="#"><i class="fa fa-align-justify"></i></a>
+</div>
+<?php $this->load->view('front/include/header'); ?>
+<?php $this->load->view('front/include/mobile_cat'); ?>
+<div class="header_modules"></div>
+<div id="container">
+<div class="container">
+<div class="row">
+<div id="content" class="col-sm-12">
+<?php $this->load->view('front/sepet/breadcrumb'); ?>
+<?php $this->load->view('front/sepet/main_content'); ?>
+</div>
+</div>
+</div>
+</div>
+<?php $this->load->view('front/include/footer'); ?>
+<?php $this->load->view('front/include/script'); ?>  </div>
+</body>
+</html>

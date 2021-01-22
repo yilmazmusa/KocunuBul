@@ -1,0 +1,24 @@
+{
+    "sDecimal":        ",",
+    "sEmptyTable":     "Tabloda herhangi bir veri mevcut deðil",
+    "sInfo":           "_TOTAL_ kayýttan _START_ - _END_ arasýndaki kayýtlar gösteriliyor",
+    "sInfoEmpty":      "Kayýt yok",
+    "sInfoFiltered":   "(_MAX_ kayýt içerisinden bulunan)",
+    "sInfoPostFix":    "",
+    "sInfoThousands":  ".",
+    "sLengthMenu":     "Sayfada _MENU_ kayýt göster",
+    "sLoadingRecords": "Yükleniyor...",
+    "sProcessing":     "Ýþleniyor...",
+    "sSearch":         "Ara:",
+    "sZeroRecords":    "Eþleþen kayýt bulunamadý",
+    "oPaginate": {
+        "sFirst":    "Ýlk",
+        "sLast":     "Son",
+        "sNext":     "Sonraki",
+        "sPrevious": "Önceki"
+    },
+    "oAria": {
+        "sSortAscending":  ": artan sütun sýralamasýný aktifleþtir",
+        "sSortDescending": ": azalan sütun sýralamasýný aktifleþtir"
+    }
+}

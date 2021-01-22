@@ -1,0 +1,52 @@
+  Bankanın Bize vermesi gereken bilgiler
+  Mağaza Kodu ( storeID ) 412 / 12
+  İş Yeri Anahtarı ( işyeri Ayracı )
+  Kullanıcı Adı
+  Şifre
+  3D secure sorgulama sunucu adresi
+  3D secure işlemi api sunucusu adresi
+
+  $clientId = // Banka tarafından verilen iş yeri numarası
+  $amount = // 19,9 İşlem tutarı
+  $oid = // 19 Sipariş numarası => Eşsiz bir değer olmak zorundadır
+  $okUrl = // işlem başarılı olunca dönülecek sayfa ( 3D ödeme işlemi,satın alma değil )
+  $failUrl = // işlem başarısız olunca dönülecek sayfa ( 3D ödeme işlemi, satın alma değil )
+
+  $rnd = microtime(); // güvenlik amaçlı tarih veya her seferinde değişen bir değer // $rnd = xxxxx
+
+  $storekey = // iş yeri ayracı / anahtar
+  $storetype = "3D" // 3D modeli
+  $userid = // işlem için kullanıcı id
+
+  $hashparams = $_POST["HASHPARAMS"];
+   $hashparamsval = $_POST["HASHPARAMSVAL"];
+   $hashparam = $_POST["HASH"];
+   $storekey="xxxxxx";
+   $paramsval="";
+   $index1=0;
+   $index2=0;
+
+   while($index1 < strlen($hashparams))
+   {
+   $index2 = strpos($hashparams,":",$index1);
+   $vl = $_POST[substr($hashparams,$index1,$index2- $index1)];
+   if($vl == null)
+   $vl = "";
+   $paramsval = $paramsval . $vl;
+   $index1 = $index2 + 1;
+   }
+   $storekey = "xxxxxx";
+   $hashval = $paramsval.$storekey;
+  yukarıdaki kod parçasında sadece “xxxxxx” yazan yerlere işyeri anahtarını yazmamızdır.
+
+  //             ÖDEME ISLEMI ALANLARI
+
+  $name="XXXXXXXX";               //is yeri kullanic adi
+  $password="xxxxxxxxx";            //Is yeri sifresi
+  $clientid=$_POST["clientid"];          //Is yeri numarasi
+  Burada ise iş yeri kullanıcı adını ve işyeri şifresini yazacağız.
+
+
+  // Sanal pos adresine baglanti kurulmasi
+
+ $url = "https://<sunucu_adresi>/<apiserver_path>";

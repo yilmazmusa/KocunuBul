@@ -1,0 +1,91 @@
+<?php $info = $this->session->userdata('uyeinfo');?>
+<h1>Ödeme İşlemleri</h1>
+<?php echo $this->session->flashdata('durum'); ?>
+<div class="panel-body">
+<div class="radio">
+<h3>Sepet Bilgileri</h3>
+</div>
+<form action="#" method="post">
+<div class="table-responsive">
+<table class="table table-bordered table-hover">
+<thead>
+<tr>
+<td class="text-left">İsim Soyisim</td>
+<td class="text-right">Adres</td>
+<td class="text-right">İl / İlçe / Mahalle</td>
+<td class="text-right">Ödeme Türü</td>
+<td class="text-right">Kargo Fiyat</td>
+</tr>
+</thead>
+<tbody>
+
+
+<tr>
+<td class="text-left">Yeni ad</td>
+<td class="text-left">yeni adres</td>
+<td class="text-right">yeni il / yeni ilce / yeni mahalle</td>
+<td class="text-right">ödeme şekli</td>
+<td class="text-right">0 TL</td>
+
+</tr>
+<?php }else{ ?>
+<td class="text-left">ad</td>
+<td class="text-left">adres</td>
+<td class="text-right">il / ilce / mahalle</td>
+<td class="text-right">ödeme şekli</td>
+<td class="text-right">0 TL</td>
+
+</tr>
+
+</tbody>
+</table>
+
+<table class="table table-bordered table-hover">
+<thead>
+<tr>
+<td class="text-left">Ürün Adı</td>
+<td class="text-right">Adedi</td>
+<td class="text-right">Fiyatı</td>
+<td class="text-right">Toplam</td>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="text-left">ürün adı</td>
+<td class="text-right" style="font-weight:bold; font-size:16px">adet</td>
+<input type="hidden" name="adet" value="adet">
+<td class="text-right" style="font-weight:bold; font-size:16px">00 TL</td>
+<input type="hidden" name="fiyat" value="00">
+<td class="text-right" style="color:black; font-weight:bold; font-size:16px">subtotal</td>
+<input type="hidden" name="toplam" value="subtotal">
+</tr>
+
+</tbody>
+<tfoot>
+<tr>
+<td colspan="3" class="text-right"><strong>Sepetteki Ürün Adedi :</strong></td>
+<td class="text-right" style="color:black; font-weight:bold; font-size:16px">0 Adet</td>
+<input type="hidden" name="adet" value="0">
+<input type="hidden" name="urunID" value="">
+<input type="hidden" name="id" value="">
+<input type="hidden" name="urunadi" value="">
+</tr>
+<tr>
+<td colspan="3" class="text-right"><strong>Sepet Toplamı :</strong></td>
+<td class="text-right" style="color:red; font-weight:bold; font-size:20px">00 TL</td>
+<input type="hidden" name="toplamtutar" value="00">
+</tr>
+</tfoot>
+<?php } ?>
+</table>
+</div>
+<div class="buttons">
+<div class="pull-right">
+<input type="submit" value="Ödeme İşlemini Onayla" id="button-confirm" class="btn btn-primary">
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
